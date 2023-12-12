@@ -1,0 +1,28 @@
+/******************************************************************************/ 
+
+#include "stm32f10x.h"
+#include "usart.h"
+#include "delay.h"
+
+/**
+  * @brief  主函数
+  * @param  无
+  * @retval 无
+  */
+int main(void)
+{	
+
+	uart_init(115200); //串口初始化为115200
+	delay_init();	   //延时函数初始化	
+	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2); //设置NVIC中断分组2:2位抢占优先级，2位响应优先级
+	
+	printf("欢迎使用野火STM32开发板\n\n\n\n");
+
+  while(1)
+	{	
+		
+	}	
+}
+
+
+/*********************************************END OF FILE**********************/
